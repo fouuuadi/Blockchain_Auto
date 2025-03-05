@@ -37,7 +37,7 @@ export default function Blockchain() {
       abi: HETIC_ABI, // ABI du contrat HETIC ERC20
       functionName: "mint", // Nom de la fonction à appeler
       address: HETIC_ADDRESS, // Adresse du contrat HETIC ERC20
-      args: [address, 100n], // Argument pour la fonction mint
+      args: [address, 200n], // Argument pour la fonction mint
     });
   };
 
