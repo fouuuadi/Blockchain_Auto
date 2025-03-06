@@ -7,10 +7,10 @@ import "hardhat/types/artifacts";
 
 declare module "hardhat/types/artifacts" {
   interface ArtifactsMap {
-    IERC20: never;
+    
   }
 
   interface ContractTypesMap {
-    IERC20: never;
+    
   }
 }

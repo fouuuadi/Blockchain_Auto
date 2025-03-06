@@ -23,7 +23,7 @@ export default function Blockchain() {
   const { data: balance, refetch } = useReadContract({
     abi: HETIC_ABI, // ABI du contrat HETIC ERC20
     functionName: "balanceOf", // Nom de la fonction à appeler
-    address: HETIC_ADDRESS, // Adresse du contrat HETIC ERC20
+    address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512", // Adresse du contrat HETIC ERC20
     args: address ? [address] : undefined, // Only pass args if address exists
   });
 
@@ -36,7 +36,7 @@ export default function Blockchain() {
     writeContract({
       abi: HETIC_ABI, // ABI du contrat HETIC ERC20
       functionName: "mint", // Nom de la fonction à appeler
-      address: HETIC_ADDRESS, // Adresse du contrat HETIC ERC20
+      address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512", // Adresse du contrat HETIC ERC20
       args: [address, 200n], // Argument pour la fonction mint
     });
   };
