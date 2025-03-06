@@ -4,6 +4,7 @@ import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WagmiProvider } from "wagmi";
 import { config } from "../config";
+//import TestTailwind from "../../src/app/test/test"; // Import the TestTailwind component
 
 const queryClient = new QueryClient();
 

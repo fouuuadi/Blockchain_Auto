@@ -4,7 +4,7 @@
 import {HETIC_ABI} from '../../../public/Hetic';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount, useWriteContract, useReadContract } from 'wagmi';
-
+import Footer from '../Footer/page';
 /**
  * Adresse du contrat HETIC ERC20.
  * Cette adresse est utilisée pour interagir avec le contrat intelligent HETIC.
@@ -75,6 +75,8 @@ export default function Blockchain() {
       {isPending && <p className="text-yellow-500">Minting...</p>}
       {isSuccess && <p className="text-green-500">Minting successful!</p>}
       {isError && <p className="text-red-500">Minting failed.</p>}
+
+      <Footer></Footer>
     </div>
   );
 }
