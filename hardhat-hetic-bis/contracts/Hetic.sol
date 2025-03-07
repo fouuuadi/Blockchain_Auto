@@ -13,7 +13,7 @@ import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
  */
 contract Hetic is ERC20 {
 
-    Cars[] cars;
+    Cars[] public cars;
 
 
     struct Cars {
@@ -45,6 +45,15 @@ contract Hetic is ERC20 {
         Cars memory _cars = cars[id];
         require(balanceOf(msg.sender) >= _cars.price, "Solde insuffisant pour acheter la voiture");
         _burn(msg.sender, _cars.price);
-
     }
+
+    // Ajoutez ces fonctions dans votre contrat
+    function getCarCount() public view returns (uint256) {
+        return cars.length;
+    }
+
+    function getCars() public view returns (Cars[] memory) {
+        return cars;
+    }
+
 }
